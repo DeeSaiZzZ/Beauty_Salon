@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.martynyshyn.beautysalon.controller.servlet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/main-servlet/main_page</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.martynyshyn.beautysalon.controller.filters.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/main-servlet/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CommandAccessFilter</filter-name>
+        <filter-class>com.martynyshyn.beautysalon.controller.filters.CommandAccessFilter</filter-class>
+        <init-param>
+            <param-name>admin</param-name>
+            <param-value>moderate_order check_all_order check_request cancel_request accept_request</param-value>
+        </init-param>
+        <init-param>
+            <param-name>master</param-name>
+            <param-value>show_timetable complete_order</param-value>
+        </init-param>
+        <init-param>
+            <param-name>default</param-name>
+            <param-value>open_order_reg_form open_my_order_list find_service find_timeSlots create_request</param-value>
+        </init-param>
+        <init-param>
+            <param-name>common</param-name>
+            <param-value>open_master_list open_service_list logging_user logout_user registered_user change_lan</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CommandAccessFilter</filter-name>
+        <servlet-name>MainServlet</servlet-name>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.martynyshyn.beautysalon.controller.listener.ContextListener</listener-class>
+    </listener>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/view/error/404.jsp</location>
+    </error-page>
+
+</web-app>
