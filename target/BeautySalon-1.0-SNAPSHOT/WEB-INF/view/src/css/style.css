@@ -1,0 +1,35 @@
+.container input[name="login"] {
+    background-position: 4px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+.container input[name="pass"] {
+    background-position: 4px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+.withoutAuth {
+    padding-left: 7px;
+}
+
+.navigate {
+    padding-top: 10px;
+}
+
+.container input[name="name"] {
+    background-position: 4px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+.container input[name="surname"] {
+    background-position: 4px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+.attention {
+    color: #ec0404;
+}

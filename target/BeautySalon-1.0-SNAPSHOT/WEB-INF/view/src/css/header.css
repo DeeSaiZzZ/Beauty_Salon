@@ -1,0 +1,52 @@
+.header {
+    background-color: Indigo;
+    color: #ffffff;
+}
+
+.userInfo {
+    margin-left: 90%;
+}
+
+.header .navbar-expand-lg ul {
+    margin: 2px 0 22px 17px;
+}
+
+.header .navbar-expand-lg ul li {
+    margin: 0 0 6px 0;
+    padding: 0 0 4px 5px;
+    line-height: 1.5em;
+}
+
+.header .navbar-expand-lg ul.menu {
+    float: left;
+}
+
+.header .navbar-expand-lg ul.menu li {
+    float: left;
+    padding: 0 0 0 9px;
+    list-style: none;
+    margin: 1px 2px 0 0;
+}
+
+.header .navbar-expand-lg ul.menu li a {
+    font: normal 100% 'trebuchet ms', sans-serif;
+    display: block;
+    height: 20px;
+    padding: 6px 35px 5px 28px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header .navbar-expand-lg ul.menu li a:hover {
+    color: #ec0404;
+}
+
+.header .language_selector{
+    margin-left: auto;
+}
+
+.lang_button {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+}
